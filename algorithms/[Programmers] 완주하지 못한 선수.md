@@ -31,6 +31,10 @@ vinko는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문�
 
 mislav는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
 
+---
+
+### Solution code
+
 ```python
 def solution(participant, completion):
     participant_dict = {}
@@ -47,3 +51,13 @@ def solution(participant, completion):
         
     return answer
 ```
+
+---
+
+### Notes
+
+- Hash 문제
+- `completion의 길이는 participant의 길이보다 1 작습니다.`라는 문제 설정이 포인트
+- 이름을 key 값, count를 value로 하여 hash 구성 (dictionary)
+- completion를 순회하여 count 차감
+- 최종 dictionary에서 value 값이 1인 사람이 완주하지 못한 사람
