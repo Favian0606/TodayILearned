@@ -76,7 +76,9 @@ def is_palindrome(input_string: str) -> bool:
     # filtering for only alphanumeric on lower case
     s = re.sub('[^a-z0-9]', '', s)
 
-    return s == s[::-1]
+    # python reverse list reverse() vs reversed() vs slicing
+    # https://www.pythonpool.com/python-reverse-list/
+    return s == s[::-1]  # compared with reversed string using slice notation (step)
 
 
 print(is_palindrome(input_text_example_one))
